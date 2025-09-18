@@ -1,0 +1,234 @@
+.screen { 
+  padding: 16px; 
+  animation: fadeIn 0.3s ease; 
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.info-section {
+  margin-bottom: 20px;
+}
+
+.filter-section {
+  margin-bottom: 20px;
+}
+
+.filter-btn-full {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 100%;
+  justify-content: center;
+}
+
+.filter-btn-full:hover {
+  background: #ebebeb;
+}
+
+.circulation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.circulation-card {
+  background: #f5f5f5; 
+  border-radius: 8px; 
+  padding: 16px; 
+  margin-bottom: 12px;
+}
+
+.circulation-header {
+  display: flex; 
+  align-items: center; 
+  gap: 8px; 
+  font-weight: 600; 
+  margin-bottom: 8px;
+}
+
+.policy-icon {
+  font-size: 18px;
+}
+
+.circulation-details { 
+  font-size: 14px; 
+  color: #666; 
+}
+
+/* Nuevos estilos para la página de detalle de póliza */
+.poliza-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.poliza-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+}
+
+.poliza-info-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+}
+
+.poliza-type-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.poliza-icon {
+  font-size: 24px;
+}
+
+.poliza-details-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detail-item strong {
+  color: #666;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.detail-item span {
+  color: #333;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.vigente-badge {
+  background: #e8f5e8;
+  color: #2e7d32;
+  padding: 6px 12px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.error-message {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .poliza-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  
+  .poliza-info-card {
+    padding: 16px;
+  }
+  
+  .poliza-header h2 {
+    font-size: 20px;
+  }
+}
+
+/* Estilos para información adicional */
+.section-title {
+  margin: 0 0 16px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 8px;
+}
+
+.saldo-vencido {
+  color: #d32f2f !important;
+  font-weight: 600;
+}
+
+/* Estilos para riesgos */
+.riesgos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.riesgo-item {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 16px;
+  border-left: 4px solid #1976d2;
+}
+
+.riesgo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.riesgo-numero {
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.estado-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.estado-badge.activo {
+  background: #e8f5e8;
+  color: #2e7d32;
+}
+
+.estado-badge.baja {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.riesgo-description {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.riesgo-vigencia {
+  font-size: 13px;
+  color: #666;
+}

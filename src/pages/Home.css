@@ -1,0 +1,262 @@
+.welcome-section { 
+  margin-bottom: 20px; 
+}
+
+.welcome-section h2 { 
+  font-size: 20px; 
+  font-weight: 600; 
+  color: #333; 
+}
+
+/* Contenedor del carrusel */
+.policies-carousel {
+  margin-bottom: 20px;
+}
+
+.policies-carousel h3 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #333;
+  padding-left: 4px;
+}
+
+/* Wrapper para botones de navegación */
+.carousel-wrapper {
+  position: relative;
+  display: block;
+}
+
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 4px;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.policy-card {
+  background: #f5f5f5; 
+  border-radius: 8px; 
+  padding: 16px; 
+  min-width: 320px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+.policy-card.single {
+  margin-bottom: 20px;
+  min-width: auto;
+  width: 100%;
+}
+
+/* Wrapper para CardPoliza en carrusel */
+.carousel-card-wrapper {
+  min-width: 320px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+/* Ajustes para CardPoliza en carrusel */
+.carousel-container .policy-card-detailed {
+  margin-bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.policy-header {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  margin-bottom: 12px;
+}
+
+.policy-type { 
+  font-weight: 600; 
+  color: #333; 
+}
+
+.policy-badge {
+  background: #4a4a4a; 
+  color: white; 
+  padding: 4px 8px; 
+  border-radius: 4px; 
+  font-size: 12px;
+}
+
+.policy-details { 
+  margin-bottom: 12px; 
+  line-height: 1.6; 
+  color: #666; 
+}
+
+.policy-status { 
+  display: flex; 
+  gap: 16px; 
+}
+
+.status-paid, .status-active, .status-inactive {
+  font-size: 12px; 
+  color: #333; 
+  display: flex; 
+  align-items: center; 
+  gap: 4px;
+}
+
+.status-inactive {
+  color: #ff6b6b;
+}
+
+/* Botones de navegación lateral */
+.carousel-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  z-index: 10;
+  backdrop-filter: blur(2px);
+}
+
+.carousel-nav-prev {
+  left: 8px;
+}
+
+.carousel-nav-next {
+  right: 8px;
+}
+
+.carousel-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #222;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.carousel-nav-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+/* Indicadores (dots) */
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ccc;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.carousel-dot.active {
+  background: #4a4a4a;
+  transform: scale(1.2);
+}
+
+.carousel-dot:hover {
+  background: #999;
+}
+
+
+.action-buttons {
+  display: flex; 
+  flex-direction: column; 
+  gap: 12px; 
+  margin-bottom: 24px;
+}
+
+.action-btn {
+  background: #4a4a4a; 
+  color: white; 
+  border: none; 
+  padding: 12px; 
+  border-radius: 4px;
+  font-size: 14px; 
+  cursor: pointer;
+}
+
+.action-btn:hover { 
+  background: #333; 
+}
+
+.quote-section, .news-section { 
+  margin-bottom: 24px; 
+}
+
+.quote-section h3, .news-section h3 { 
+  font-size: 16px; 
+  margin-bottom: 12px; 
+  color: #333; 
+}
+
+.quote-card {
+  background: #f5f5f5; 
+  border-radius: 8px; 
+  padding: 16px; 
+  display: flex; 
+  align-items: center; 
+  gap: 12px;
+}
+
+.quote-icon { 
+  font-size: 24px; 
+}
+
+.quote-card h4 { 
+  font-size: 14px; 
+  margin-bottom: 4px; 
+  color: #333; 
+}
+
+.quote-card p { 
+  font-size: 12px; 
+  color: #666; 
+  margin-bottom: 4px; 
+}
+
+.quote-card small { 
+  font-size: 10px; 
+  color: #999; 
+}
+
+.news-placeholder {
+  background: #f5f5f5; 
+  border-radius: 8px; 
+  padding: 60px 16px; 
+  text-align: center;
+}
+
+.placeholder-image {
+  width: 80px; 
+  height: 60px; 
+  background: #ddd; 
+  border-radius: 4px; 
+  margin: 0 auto;
+}

@@ -1,0 +1,289 @@
+.filter-section {
+  margin-bottom: 16px;
+}
+
+.filter-btn-full {
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 8px; 
+  background: #f5f5f5;
+  border: 1px solid #ddd; 
+  border-radius: 20px; 
+  padding: 8px 16px; 
+  margin-bottom: 16px;
+  cursor: pointer; 
+  font-size: 14px;
+}
+
+.filter-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+/* Nuevo estilo para filtro con input */
+.filter-input-wrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.filter-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+  color: #333;
+  pointer-events: auto;
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.filter-input:focus {
+  outline: none;
+  border-color: #4a4a4a;
+  background-color: white;
+}
+
+.filter-btn {
+  padding: 12px;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-btn:hover {
+  background: #ebebeb;
+}
+
+.filter-btn.active {
+  background: #1976d2;
+  color: white;
+  border-color: #1976d2;
+}
+
+.polizas-riesgos-list h2 {
+  margin: 24px 0 16px 0;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.polizas-riesgos-list h2:first-child {
+  margin-top: 0;
+}
+
+.polizas-list,
+.riesgos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.policy-card-detailed {
+  background: #f5f5f5; 
+  border-radius: 8px; 
+  padding: 16px; 
+  margin-bottom: 16px;
+}
+
+.policy-type-header {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  margin-bottom: 12px;
+}
+
+.policy-type-header span:first-child {
+  display: flex; 
+  align-items: center; 
+  gap: 8px; 
+  font-weight: 600;
+}
+
+.policy-icon {
+  font-size: 20px;
+}
+
+.circulation-badge {
+  background: #4a4a4a; 
+  color: white; 
+  padding: 4px 8px; 
+  border-radius: 4px; 
+  font-size: 11px;
+}
+
+.policy-details { 
+  margin-bottom: 12px; 
+  line-height: 1.6; 
+  color: #666; 
+}
+
+.policy-actions { 
+  display: flex; 
+  gap: 16px; 
+  margin-top: 12px; 
+}
+
+.status-paid, .status-active, .status-expired {
+  font-size: 12px; 
+  color: #333; 
+  display: flex; 
+  align-items: center; 
+  gap: 4px;
+}
+
+.status-expired {
+  background: #fff3e0;
+  color: #f57c00;
+  border: 1px solid #ffcc02;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  color: #666;
+  font-size: 16px;
+}
+
+.error-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.error-message p {
+  color: #d32f2f;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.retry-button {
+  background: #1976d2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.retry-button:hover {
+  background: #1565c0;
+}
+
+.no-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+  color: #666;
+  font-size: 16px;
+}
+
+.no-results p {
+  margin: 8px 0;
+}
+
+/* Carousel styles for MisPolizas page */
+.polizas-carousel {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-container {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 0 4px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-card-wrapper {
+  flex: 0 0 320px;
+  scroll-snap-align: start;
+}
+
+.poliza-card.single {
+  width: 100%;
+}
+
+.carousel-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.2s ease;
+}
+
+.carousel-nav-btn:hover {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-nav-prev {
+  left: -12px;
+}
+
+.carousel-nav-next {
+  right: -12px;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.carousel-dot.active {
+  background: #1976d2;
+}

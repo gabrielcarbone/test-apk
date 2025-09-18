@@ -1,0 +1,151 @@
+/* CardPoliza specific styles */
+.policy-card-detailed {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  transition: box-shadow 0.2s ease;
+}
+
+.policy-card-detailed:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+.policy-type-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.policy-icon {
+  font-size: 24px;
+}
+
+.circulation-badge {
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: auto;
+}
+
+.policy-details {
+  margin-bottom: 16px;
+}
+
+.policy-details p {
+  margin: 8px 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.policy-details strong {
+  color: #333;
+  font-weight: 600;
+}
+
+.policy-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.status-paid {
+  background: #e8f5e8;
+  color: #2e7d32;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.status-active {
+  background: #e8f5e8;
+  color: #2e7d32;
+}
+
+.status-expired {
+  background: #ffebee;
+  color: #d32f2f;
+}
+
+
+.btn-select,
+.btn-deselect {
+  background: #1976d2;
+  color: white;
+  border: none;
+  padding: 8px 4px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}
+
+.btn-select:hover {
+  background: #1565c0;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.3);
+}
+
+.btn-deselect {
+  background: #f44336;
+}
+
+.btn-deselect:hover {
+  background: #d32f2f;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(244, 67, 54, 0.3);
+}
+
+@media (max-width: 768px) {
+  .policy-card-detailed {
+    padding: 16px;
+    margin-bottom: 12px;
+  }
+  
+  .policy-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  
+  .status-paid,
+  .status {
+    text-align: center;
+  }
+  
+  .btn-select,
+  .btn-deselect {
+    width: 100px;
+    padding: 8px 4px;
+  }
+}

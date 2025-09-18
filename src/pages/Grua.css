@@ -1,0 +1,358 @@
+.grua-container {
+  padding: 13px 24px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.grua-header {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.grua-header__icon {
+  width: 27px;
+  height: 27px;
+}
+
+.grua-header__title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  margin: 0;
+}
+
+.grua-description {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  margin-bottom: 28px;
+  max-width: 306px;
+}
+
+.grua-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-label {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  color: #171717;
+  margin-bottom: 6px;
+}
+
+.input-wrapper {
+  border: 1px solid #d4d4d4;
+  border-radius: 8px;
+  padding: 0 12px;
+  height: 42px;
+}
+
+.input-field {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+}
+
+.map-container {
+  margin-top: 9px;
+  margin-bottom: 27px;
+  align-self: center;
+  width: 356px;
+  height: 161px;
+  margin-left: -28px;
+  margin-right: -28px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.map-loading {
+  width: 100%;
+  height: 161px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+  font-size: 14px;
+  color: #666;
+}
+
+.leaflet-container {
+  height: 161px;
+  width: 100%;
+}
+
+/* Filter section styles - matching MisPolizas */
+.filter-input-wrapper {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.filter-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+  color: #333;
+  pointer-events: auto;
+  user-select: text;
+  -webkit-user-select: text;
+}
+
+.filter-input:focus {
+  outline: none;
+  border-color: #4a4a4a;
+  background-color: white;
+}
+
+.filter-btn {
+  padding: 12px;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-btn:hover {
+  background: #ebebeb;
+}
+
+.filter-btn.active {
+  background: #1976d2;
+  color: white;
+  border-color: #1976d2;
+}
+
+/* Legacy search bar styles - keeping for backwards compatibility */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f5f5f5;
+  border: 1px solid #d4d4d4;
+  border-radius: 16px;
+  height: 35px;
+  padding: 0 22px;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  flex-grow: 1;
+}
+
+/* Carousel styles for Grua page */
+.riesgos-carousel {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-container {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 0 4px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-card-wrapper {
+  flex: 0 0 320px;
+  scroll-snap-align: start;
+}
+
+.riesgo-card.single {
+  width: 100%;
+}
+
+.carousel-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.2s ease;
+}
+
+.carousel-nav-btn:hover {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-nav-prev {
+  left: -12px;
+}
+
+.carousel-nav-next {
+  right: -12px;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.carousel-dot.active {
+  background: #1976d2;
+}
+
+.no-riesgos {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+}
+
+.no-riesgos p {
+  margin: 8px 0;
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+}
+
+
+/* Legacy vehicle card styles - keeping for backwards compatibility */
+.vehicle-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-top: 27px;
+}
+
+.vehicle-card__icon {
+  width: 30px;
+  height: 27px;
+}
+
+.vehicle-card__details {
+  display: flex;
+  flex-direction: column;
+}
+
+.vehicle-card__name {
+  font-family: 'Outfit', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  margin: 0;
+}
+
+.vehicle-card__info {
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.schedule-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.schedule-group__text {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  max-width: 208px;
+  line-height: 1.25;
+  margin: 0;
+}
+
+.schedule-group__text.disabled {
+  color: #999;
+  opacity: 0.6;
+}
+
+/* Material-UI Switch styling can be customized if needed */
+.schedule-group .MuiSwitch-root {
+  /* Custom switch styles if needed */
+}
+
+.confirm-button {
+  width: 100%;
+  height: 33px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 59px;
+  transition: background-color 0.2s ease;
+}
+
+.confirm-button:hover {
+  background-color: #555;
+}
+
+.confirm-button:active {
+  background-color: #222;
+}
+
+.confirm-button:disabled {
+  background-color: #ccc;
+  color: #999;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.confirm-button:disabled:hover {
+  background-color: #ccc;
+}

@@ -1,0 +1,36 @@
+.account-section, .security-section, .notifications-section { 
+  margin-bottom: 32px; 
+}
+
+.account-section h3, .security-section h3, .notifications-section h3 {
+  font-size: 16px; 
+  margin-bottom: 16px; 
+  color: #333;
+}
+
+.account-field {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  margin-bottom: 12px;
+  padding: 12px 0; 
+  border-bottom: 1px solid #eee;
+}
+
+.change-btn { 
+  background: none; 
+  border: none; 
+  color: #007AFF; 
+  cursor: pointer; 
+  font-size: 14px; 
+}
+
+.notification-group { 
+  margin-bottom: 24px; 
+}
+
+.notification-types h4 { 
+  font-size: 14px; 
+  margin-bottom: 16px; 
+  color: #333; 
+}

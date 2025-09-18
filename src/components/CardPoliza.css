@@ -1,0 +1,69 @@
+/* CardPoliza specific styles */
+.poliza-number-link {
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.poliza-number-link:hover {
+  text-decoration: underline;
+}
+
+.poliza-card-detailed {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  transition: box-shadow 0.2s ease;
+}
+
+.poliza-card-detailed:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.poliza-type-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.poliza-icon {
+  font-size: 24px;
+}
+
+.vigente-badge {
+  background: #e8f5e8;
+  color: #2e7d32;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: auto;
+}
+
+.poliza-details {
+  margin-bottom: 16px;
+}
+
+.poliza-details p {
+  margin: 8px 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.poliza-details strong {
+  color: #333;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .poliza-card-detailed {
+    padding: 16px;
+    margin-bottom: 12px;
+  }
+}

@@ -1,0 +1,1114 @@
+# Instrucciones Claude - Proyecto Nación App
+
+Este archivo contiene el historial de comandos e instrucciones dadas para el desarrollo de la aplicación de seguros.
+
+## Comandos ejecutados:
+
+1. **Integración inicial del componente**
+   - "quiero que el archivo tsx que esta en ../onefile/nacion.tsx funcione en este proyecto react y se vea en App"
+   - Resultado: Se instaló lucide-react, se creó InsuranceApp.tsx y se integró en App.tsx
+
+2. **Extracción de CSS**
+   - "hay que sacar los css y ponerlos en una ubicacion standar"
+   - Resultado: Se movieron los estilos inline a InsuranceApp.css
+
+3. **Separación del Footer**
+   - "quiero el footer en un componente aparte llamado Footer"
+   - Resultado: Se creó Footer.tsx y Footer.css con props tipadas
+
+4. **Separación del Header**
+   - "quiero un hacer un header como componente separado llamado Header"
+   - Resultado: Se creó Header.tsx y Header.css con callbacks para eventos
+
+5. **Fix del cursor**
+   - "el puntero del mouse es un circulo, quiero que el puntero se comporte de una manera tradicional"
+   - Resultado: Se agregó cursor: default en CSS global
+
+6. **Separación del Calendario**
+   - "quiero que Mi calendario este en un componente separado llamado Calendario"
+   - Resultado: Se creó Calendario.tsx y Calendario.css
+
+7. **Separación de Mi Cuenta**
+   - "quiero que mi cuenta este en un componente separado llamado MiCuenta"
+   - Resultado: Se creó MiCuenta.tsx y MiCuenta.css con props para datos de usuario
+
+8. **Separación de Mis Pólizas**
+   - "quier que mis polizas este en un componente aparte llamado MisPolizas"
+   - Resultado: Se creó MisPolizas.tsx y MisPolizas.css con props para array de pólizas
+
+9. **Separación de Preguntas Frecuentes**
+   - "quiero que preguntas frecuentes este en un componente separado llamado PreguntasFrecuentes"
+   - Resultado: Se creó PreguntasFrecuentes.tsx y PreguntasFrecuentes.css con props para categorías FAQ
+
+10. **Reorganización de archivos - Pages vs Components**
+    - "quiero que todos los componentes de /components se muevan a /pages pues son pages, excepto Header y Footer que si, son componentes"
+    - Resultado: Se movieron Calendario, MiCuenta, MisPolizas y PreguntasFrecuentes de /components a /pages y se actualizaron imports
+
+11. **Mover InsuranceApp a /pages**
+    - "quiero que InsuranceApp tambien se mueva a pages"
+    - Resultado: Se movió InsuranceApp.tsx y InsuranceApp.css de /components a /pages, se actualizaron imports en App.tsx y en el propio InsuranceApp
+
+12. **Separación de la página Home**
+    - "quiero que inicio se mueva a una page en /pages llamada Home"
+    - Resultado: Se creó Home.tsx y Home.css con el contenido de la pantalla de inicio, se actualizó InsuranceApp para usar el componente Home
+
+## Estructura actual del proyecto:
+
+### Componentes (/src/components/):
+- **Header.tsx** - Encabezado con navegación y menú (componente reutilizable)
+- **Footer.tsx** - Navegación inferior (componente reutilizable)
+
+### Páginas (/src/pages/):
+- **InsuranceApp.tsx** - Página principal de la aplicación con manejo de estado y routing
+- **Home.tsx** - Pantalla de inicio con resumen de pólizas y acciones principales
+- **Calendario.tsx** - Pantalla de calendario con opciones
+- **MiCuenta.tsx** - Configuración de cuenta y notificaciones  
+- **MisPolizas.tsx** - Lista de pólizas del usuario
+- **PreguntasFrecuentes.tsx** - Pantalla de FAQ con buscador y categorías
+- **Pagos.tsx** - Pantalla de pagos con gestión de cuotas y medios de pago
+- **Asistencia.tsx** - Pantalla de asistencia con servicios y agendamiento
+- **Contacto.tsx** - Pantalla de contacto con información de atención y ubicaciones
+- **Denuncias.tsx** - Pantalla de denuncias con historial de siniestros
+- **Login.tsx** - Pantalla de login con formulario de autenticación
+- **Cobertura.tsx** - Pantalla de cobertura con buscador y documentación
+- **Poliza.tsx** - Pantalla de póliza con tarjeta de circulación y filtros
+
+13. **Separación de la página Pagos**
+    - "quiero que la pagina pagos se mueva como nueva page a /page llamada Pagos"
+    - Resultado: Se creó Pagos.tsx y Pagos.css con el contenido de la pantalla de pagos, se extrajo la lógica de pagos de InsuranceApp, se removieron los estilos relacionados con pagos del CSS principal
+
+14. **Separación de la página Asistencia**
+    - "la pagina asistencia deberia moverse a /pages y llamarla Asistencia"
+    - Resultado: Se creó Asistencia.tsx y Asistencia.css con el contenido de la pantalla de asistencia, se extrajo la lógica de asistencia de InsuranceApp, se removieron los estilos relacionados con asistencia del CSS principal
+
+15. **Separación de la página Centro de Contacto**
+    - "la pagina centro de contacto deberia moverse a /pages y llamarla Contacto"
+    - Resultado: Se creó Contacto.tsx y Contacto.css con el contenido de la pantalla de contacto, se extrajo la lógica de contacto de InsuranceApp, se removieron los estilos relacionados con contacto del CSS principal
+
+16. **Separación de la página Denuncias**
+    - "la pagina denuncias deberia moverse a /pages y llamarla Denuncias"
+    - Resultado: Se creó Denuncias.tsx y Denuncias.css con el contenido de la pantalla de denuncias (claims-list), se extrajo la lógica de denuncias de InsuranceApp, se removieron los estilos relacionados con denuncias del CSS principal
+
+17. **Separación de la página Login**
+    - "quiero que la pagina login se mueva a /pages y llamarla Login"
+    - Resultado: Se creó Login.tsx y Login.css con el contenido de la pantalla de login, se extrajo la lógica de login de InsuranceApp con callback onLogin, se removieron los estilos relacionados con login del CSS principal
+
+18. **Separación de la página Cobertura**
+    - "El switch de InsuranceApp tiene un case 'coverage' , debe moverse a /pages y llamarlo Cobertura"
+    - Resultado: Se creó Cobertura.tsx y Cobertura.css con el contenido de la pantalla de cobertura (case 'coverage'), se extrajo la lógica de cobertura de InsuranceApp, se removieron los estilos relacionados con cobertura del CSS principal
+
+19. **Separación de la página Poliza**
+    - "dentro del switch de la pagina InsuranceApp hay un case 'circulation' , hay que moverlo a /pages y llamarlo Poliza"
+    - Resultado: Se creó Poliza.tsx y Poliza.css con el contenido de la pantalla de circulación (case 'circulation'), se extrajo la lógica de circulación de InsuranceApp, se removieron los estilos relacionados con circulación del CSS principal
+
+20. **Adición de enlaces al menú hamburguesa**
+    - "hay que agregar dentro del menu hamburguesa un link a la page Cobertura"
+    - "hay que agregar dentro del menu hamburguesa un link a la page Poliza"
+    - "hay que agregar dentro del menu hamburguesa un link a la page Login, aunque uno este logueado, quiero tener a mano la pagina"
+    - Resultado: Se agregaron enlaces "Mi cobertura", "Tarjeta de circulación" y "Login" al sidebar del menú hamburguesa
+
+21. **Refactorización de estado - Separación de responsabilidades**
+    - "mover desde InsuranceApp la variable user hacia la page Home, junto con su correspondiente useState"
+    - "mover desde InsuranceApp la variable services hacia la page Asistencia, junto con su correspondiente useState si lo hubiera"
+    - "mover desde InsuranceApp las variables claims y selectedPolicy hacia la page Denuncias, junto con su correspondiente useState si lo hubiera"
+    - "mover desde InsuranceApp la variable policies hacia la page Poliza, junto con su correspondiente useState si lo hubiera"
+    - "mover desde InsuranceApp las variables payments y selectedPolicy hacia la page Pagos, junto con su correspondiente useState si lo hubiera"
+    - "mover desde InsuranceApp la variable faqCategories hacia la page PreguntasFrecuentes, junto con su correspondiente useState si lo hubiera"
+    - "mover desde InsuranceApp el handler handlerLogin hacia la page Login, junto con su correspondiente useState si lo hubiera"
+    - "mover desde InsuranceApp el handler handleLoginSuccess hacia la page Login, junto con su correspondiente useState si lo hubiera"
+    - Resultado: Se movió el estado user a Home y MiCuenta, services a Asistencia, claims/selectedPolicy a Denuncias, policies a Poliza y MisPolizas, payments/selectedPolicy a Pagos, faqCategories a PreguntasFrecuentes, y toda la lógica de autenticación (handleLogin, handleLoginSuccess, validación) a Login. Cada componente ahora maneja sus propios datos y lógica de forma independiente, eliminando prop drilling y mejorando la encapsulación. InsuranceApp ahora solo maneja navegación y routing
+
+22. **ERROR - Implementación de Switch Component (FALLIDO)**
+    - "en la page MiCuenta cambia los switch/toggle simulados por componentes Switch y elimina los class si no se usan. Solamente cambia esa page"
+    - ERROR: Se creó un componente Switch complejo con estado individual para cada toggle, agregando funcionalidad no solicitada
+    - FEEDBACK DEL USUARIO: "No hiciste limpieza,agregaste cosas que no te pedi. Hace rollback del ultimo cambio."
+    - ROLLBACK COMPLETO: Se restauró MiCuenta.tsx original, se eliminaron Switch.tsx/Switch.css, se restauró CSS de toggle en InsuranceApp.css
+    - **LECCIÓN APRENDIDA**: Solo hacer cambios mínimos solicitados, no agregar funcionalidad extra ni ingeniería excesiva
+
+23. **Implementación de Switch Components con MUI**
+    - "en la page MiCuenta cambia los switch/toggle simulados por componentes Switch de la libreria @mui/material/Switch y elimina los class si no se usan. Solamente cambia esa page, los controles no tienen que tener estado todavia, tampoco le agregues handlers"
+    - Resultado: Se instaló @mui/material, @emotion/react, @emotion/styled. Se reemplazaron todos los toggles CSS en MiCuenta por Switch de MUI usando defaultChecked. Se eliminaron las clases CSS .toggle no utilizadas
+
+24. **Creación de SwitchCustom Component**
+    - "hagamos en /components un swith personalizado llamado SwitchCustom que va a contener un Switch estandar de la libreria material react. Luego sustitui los Switch de mi cuenta por llamadas al nuevo SwitchCustom"
+    - Resultado: Se creó SwitchCustom.tsx en /components que envuelve el Switch de MUI. Se reemplazaron todos los Switch en MiCuenta por SwitchCustom
+
+25. **Extensión de SwitchCustom a Calendario**
+    - "tendrias que cambiar en la page Calendar los toggle simulados en css por llamadas a los nuevos componentes SwitchCustom"
+    - Resultado: Se actualizó Calendario.tsx para usar SwitchCustom en lugar de los toggles CSS simulados, manteniendo los estados iniciales con defaultChecked
+
+26. **Creación de TextCustom Component**
+    - "crear en /components un TextCustom, un componente que envuelva al standard input text, no cambiar nada mas"
+    - Resultado: Se creó TextCustom.tsx en /components que envuelve un input estándar con props para type, placeholder, value, onChange y className
+
+27. **Actualización de Login con TextCustom**
+    - "en la page Login cambia el textbox por el nuevo creado"
+    - "quitale la propiedad value asi se pueden usar"
+    - Resultado: Se reemplazaron los inputs de usuario y contraseña en Login.tsx por TextCustom, eliminando las props value para que sean editables
+
+28. **Migración masiva a TextCustom en páginas**
+    - "cambia por TextCustom en /pages las que todavia usen el text original"
+    - Resultado: Se actualizaron PreguntasFrecuentes.tsx, Asistencia.tsx, Cobertura.tsx e InsuranceApp.tsx para usar TextCustom en lugar de inputs originales (text, date, time). Los checkboxes se mantuvieron sin cambiar
+
+29. **Creación de ButtonCustom Component**
+    - "crea en /components un ButtonCustom que envuelva el button original, que reciba children"
+    - Resultado: Se creó ButtonCustom.tsx en /components que envuelve un button estándar con props para children, onClick, className y type
+
+30. **Implementación de Router para acceso directo por URL**
+    - "quiero que agregues router y que pongas rutas para cada una de las /pages. Es importante que NO modifiques el sistema actual de links a las paginas. Quiero que agregues el router y las rutas pero que NO modifiques lo actualmente funcionando"
+    - **Discusión y refinamiento del requerimiento**:
+      - Usuario clarificó que quiere poder escribir URLs como `/calendario` en el browser para acceso directo
+      - NO quiere modificar el sistema actual de links (footer y menú hamburguesa)
+      - Solo agregar rutas para acceso manual por URL
+    - **Intentos fallidos**:
+      1. Primer intento: Tratar de sincronizar URL con estado actual - RECHAZADO
+      2. Segundo intento: Crear wrappers complejos - RECHAZADO  
+      3. Tercer intento: Header/Footer centralizados - "se rompe todo así"
+      4. Cuarto intento: Páginas individuales sin Header/Footer - Usuario notó inconsistencia
+    - **Problema identificado**: Cuando se teclea URL se va a página individual sin Header/Footer, pero links del footer/menú van a InsuranceApp con Header/Footer
+    - **Solución final refinada**:
+      - "Toma nota o hace snapshot del estado actual por si hay que volver. Quiero que no usemos InsuranceApp(no la borres) y armemos footer y header dentro de App y alli dentro instanciar las paginas. Los links en footer y menu hamburguesa podrian reemplazarse por links con la ruta"
+      - Header y Footer centralizados en App una sola vez
+      - Router Links en lugar de `onScreenChange` callbacks
+      - InsuranceApp se mantiene como respaldo en `/insurance-app`
+    - **Archivos creados/modificados**:
+      - `src/router/routes.ts` - Array de rutas con interface Route
+      - `src/App.tsx` - BrowserRouter con Header/Footer centralizados y Routes
+      - `src/components/Footer.tsx` - Actualizado para usar Links de react-router-dom
+      - Agregada dependencia: react-router-dom@^6.30.1
+    - **URLs disponibles**:
+      - `/` → Home con Header y Footer centralizados
+      - `/home` → Home con Header y Footer centralizados
+      - `/login` → Login con Header y Footer centralizados
+      - `/calendario` → Calendario con Header y Footer centralizados
+      - `/mi-cuenta` → MiCuenta con Header y Footer centralizados
+      - `/mis-polizas` → MisPolizas con Header y Footer centralizados
+      - `/preguntas-frecuentes` → PreguntasFrecuentes con Header y Footer centralizados
+      - `/pagos` → Pagos con Header y Footer centralizados
+      - `/asistencia` → Asistencia con Header y Footer centralizados
+      - `/contacto` → Contacto con Header y Footer centralizados
+      - `/denuncias` → Denuncias con Header y Footer centralizados
+      - `/cobertura` → Cobertura con Header y Footer centralizados
+      - `/poliza` → Poliza con Header y Footer centralizados
+      - `/insurance-app` → InsuranceApp original como respaldo
+
+31. **Limpieza de Footer - Eliminación de prop drilling**
+    - "hay que quitar el prop drilling del footer, luego vemos como le hacemos saber cual es la pagina activa"
+    - Resultado: Se eliminó el prop `currentScreen` del Footer component y su uso en App.tsx. Footer ahora no recibe props y puede usar `useLocation` directamente para detectar página activa cuando sea necesario
+    - **Archivos modificados**:
+      - `src/components/Footer.tsx` - Eliminado interface FooterProps y currentScreen prop
+      - `src/App.tsx` - Eliminado paso de prop currentScreen al Footer
+
+32. **Creación de página Denunciar desde código existente**
+    - "En InsuranceApp.tsx ,entre las lineas 120 y 179 hay codigo. Quiero que ese codigo se vea en una page llamada Denuncia, es nueva, hay que crearla y deberia poder ser accedida como el resto. Es decir por url y por el menu hamburguesa"
+    - **Problema detectado**: Ya existía `/denuncias`, se renombró a `/denunciar` para evitar colisión
+    - Resultado: Se creó nueva página Denunciar con formulario de denuncia extraído de InsuranceApp
+    - **Archivos creados/modificados**:
+      - `src/pages/Denunciar.tsx` - Nueva página con formulario de denuncia (líneas 120-179 de InsuranceApp)
+      - `src/pages/Denunciar.css` - CSS completo con estilos para formulario de denuncia
+      - `src/App.tsx` - Agregada ruta `/denunciar` y link en menú hamburguesa "Denunciar"
+      - `src/router/routes.ts` - Agregada ruta Denunciar al array de rutas
+    - **URLs disponibles**:
+      - `/denunciar` → Denunciar (formulario para hacer denuncia)
+      - `/denuncias` → Denuncias (lista/historial de denuncias existente)
+
+33. **Agregado de link Denuncias al menú hamburguesa**
+    - "Podrias agregar al menu hamburguesa un link a /pages/Denuncias ?"
+    - Resultado: Se agregó link "Denuncias" al menú hamburguesa para acceso directo a la página de historial de denuncias
+    - **Archivo modificado**:
+      - `src/App.tsx` - Agregado link "Denuncias" en el sidebar del menú hamburguesa
+
+34. **Migración masiva de botones a ButtonCustom**
+    - "hay un componente /components/ButtonCustom, habria que sustituir todas las instancias del button original por el nuevo wrapper. Asegurate que se mantengan las caracteristicas y tene en cuenta que se puede enviar children props"
+    - Resultado: Se reemplazaron TODOS los elementos `<button>` del proyecto por `<ButtonCustom>`, manteniendo todas las funcionalidades
+    - **Proceso realizado**:
+      1. Identificación de 17 archivos con botones originales
+      2. Agregado de import ButtonCustom en cada archivo
+      3. Reemplazo sistemático de `<button>` por `<ButtonCustom>`
+      4. Preservación de todas las props (className, onClick, key, etc.)
+      5. Preservación de todo el contenido children (texto, iconos, elementos)
+    - **Archivos modificados**:
+      - **Páginas**: Home.tsx, Login.tsx, Denunciar.tsx, Asistencia.tsx, Calendario.tsx, Cobertura.tsx, MisPolizas.tsx, Poliza.tsx, PreguntasFrecuentes.tsx, Contacto.tsx, Denuncias.tsx, MiCuenta.tsx, Pagos.tsx, InsuranceApp.tsx
+      - **Componentes**: Header.tsx
+      - **App**: App.tsx (botón de cierre del sidebar)
+    - **Verificación final**: Solo ButtonCustom.tsx contiene `<button>` original (correcto)
+    - **Funcionalidad**: Todas las características, eventos y children props mantenidas intactas
+
+35. **Instalación de dotenv y configuración de variables de entorno**
+    - "Necesito instalar la libreria para poder usar .env para la configuracion"
+    - Resultado: Se instaló dotenv y se creó archivo .env de ejemplo con variables prefijadas con VITE_
+    - **Archivos creados/modificados**:
+      - `package.json` - Agregada dependencia dotenv@^17.2.1
+      - `.env` - Archivo de ejemplo con variables de configuración (API URLs, auth, features)
+    - **Nota**: En Vite las variables se manejan automáticamente, se acceden con `import.meta.env.VITE_VARIABLE`
+
+36. **Implementación de React Query y servicio de autenticación**
+    - "Necesitamos usar react query para iniciar el login crear un servicio Auth en /services"
+    - **Endpoint especificado**: POST https://capacitacion.nacion-seguros.com.ar:4445/mobile_pru/usuario/login
+    - **Credenciales de prueba**: username: "pruebasmisseguros@nacion-seguros.com.ar", password: "Prueba2025"
+    - **Restricción importante**: NO conectar el servicio todavía, solo crear la estructura
+    - Resultado: Se implementó sistema completo de autenticación sin conectar
+    - **Dependencias instaladas**:
+      - `@tanstack/react-query@^5.85.6`
+      - `axios@^1.11.0`
+    - **Archivos creados/modificados**:
+      - `src/services/auth.ts` - Servicio completo con interfaces, función loginUser, credenciales de prueba, funciones auxiliares de token
+      - `src/hooks/useAuth.ts` - Hook useLogin preparado (comentado)
+      - `src/services/api.ts` - Cliente HTTP abstraído con Axios, interceptors, manejo de errores
+      - `.env` - Actualizado con endpoint real de API
+    - **Arquitectura implementada**:
+      1. **Separación de responsabilidades**: api.ts maneja HTTP básico, auth.ts controla configuración y autenticación
+      2. **Headers por servicio**: Cada servicio define sus propios headers (removidos de api.ts)
+      3. **URLs por servicio**: auth.ts controla API_BASE_URL, api.ts no la ve directamente
+      4. **Sin autorización centralizada**: Removido manejo automático de tokens de api.ts
+    - **Lección aprendida**: El asistente debería haber sugerido mejor separación de responsabilidades desde el principio
+
+37. **Implementación de tests Jest**
+    - "en la carpeta /tests quiero un test en jest para probar el endpoint"
+    - **Requisitos específicos**:
+      - Test debe hacer POST real al endpoint (no mocks)
+      - Mostrar respuesta del servidor por consola
+      - Usar credenciales de prueba reales
+    - **Proceso de refinamiento**:
+      1. Inicial: Test complejo con MockAdapter - RECHAZADO por usuario
+      2. Segundo intento: Simplificado pero aún con MockAdapter - "yo no te pedi mockadapter"
+      3. Final: Test real directo con axios
+    - Resultado: Se crearon dos tests funcionales para validar endpoint y función loginUser
+    - **Archivos creados**:
+      - `tests/axios.test.js` - Test directo del endpoint usando axios
+      - `tests/auth.test.js` - Test de función loginUser recreada en el test
+    - **Framework configurado**: Jest v30.1.1 con comando `npm test`
+    - **Validaciones implementadas**:
+      - Status HTTP 200
+      - Propiedades de respuesta: usuario_oracle, access_token, refresh_token, usuario_login
+      - Logging de respuesta completa del servidor
+    - **Comandos de ejecución**:
+      - `npm test` - Ejecuta todos los tests
+      - `npm test tests/axios.test.js` - Test específico de axios
+      - `npm test tests/auth.test.js` - Test específico de loginUser
+    - **Respuesta del servidor validada**:
+      - usuario_oracle: C118751
+      - access_token y refresh_token: JWT válidos
+      - Datos completos del usuario (nombre, documento, teléfonos)
+
+38. **Migración a TypeScript con Jest y configuración de .env**
+    - "por que agregaste paginas .js en /pages ?"
+    - **Problema identificado**: Al configurar Jest con TypeScript, el archivo `tsconfig.test.json` no tenía `"noEmit": true`, causando compilación de .ts a .js
+    - **Solución aplicada**: 
+      1. Se movieron todos los archivos .js generados automáticamente a `/home/gabi/borrar/`
+      2. Se agregó `"noEmit": true` en `tsconfig.test.json` para prevenir compilación
+      3. Se corrigió configuración de variables de entorno para Vite
+    - **Archivos creados/modificados**:
+      - `src/env.d.ts` - Definiciones TypeScript para variables de entorno VITE_
+      - `.env` - Configurado con variables prefijadas VITE_ para Vite
+      - `src/services/auth.ts` - Descomentadas funciones de token, actualizada interface LoginResponse
+      - `tsconfig.test.json` - Agregado "noEmit": true para evitar compilación .js
+    - **Variables de entorno configuradas**:
+      - VITE_AUTH_BASE_URL: https://capacitacion.nacion-seguros.com.ar:4445  
+      - VITE_TOKEN_STORAGE_KEY: nacion_auth_token
+    - **Migración de testing a Vitest**:
+      - Instalado Vitest para soporte nativo de `import.meta.env`
+      - Configurado `vite.config.test.ts` con definición de variables
+      - Test funcional: auth.test.ts ejecutándose correctamente con datos reales del servidor
+
+39. **Integración completa Login → Hooks → Servicio**
+    - "como harias para conectar la pagin Login al servicio de login usando /hooks"
+    - **Arquitectura implementada**:
+      1. **Hook personalizado** (`src/hooks/useAuth.ts`): useLogin, useLogout, useAuthToken
+      2. **Contexto global** (`src/context/AuthContext.tsx`): Manejo de estado de autenticación
+      3. **Login conectado** (`src/pages/Login.tsx`): Form integrado con hooks y estados
+      4. **QueryClient** (`src/main.tsx`): Configurado para React Query
+      5. **Componentes actualizados**: ButtonCustom.tsx con prop disabled
+    - **Funcionalidades integradas**:
+      - Login form con manejo de estados (loading, error, success)
+      - Gestión automática de tokens (access_token, refresh_token)
+      - Invalidación de queries al hacer login exitoso
+      - Redirección automática al home tras login
+      - Credenciales de prueba precargadas
+      - Contexto de autenticación global disponible
+    - **Test exitoso**: Servicio funcionando correctamente con datos reales del servidor
+
+40. **Limpieza de proyecto y restauración de routing**
+    - **Problema**: El diseño se rompió al cambiar de InsuranceApp a App directo
+    - **Solución aplicada**:
+      1. Restaurado InsuranceApp.tsx como componente principal de diseño responsive
+      2. App.tsx vuelve a usar InsuranceApp para mantener estilos
+      3. Footer con Links de React Router funcionando correctamente
+      4. CSS de InsuranceApp copiado a App.css para mantener diseño
+    - **Archivos modificados**:
+      - `src/App.tsx` - Simplificado para usar InsuranceApp como router principal
+      - `src/pages/InsuranceApp.tsx` - Recuperado de `/home/gabi/borrar/`
+      - `src/App.css` - Importados estilos responsive de InsuranceApp
+
+41. **Extracción y componentización del Sidebar**
+    - **Objetivo**: Separar SidebarComponent de InsuranceApp como componente reutilizable
+    - **Implementación realizada**:
+      1. **Componente independiente** (`src/components/Sidebar.tsx`): Props isOpen, onClose
+      2. **Navegación con React Router**: useNavigate() en lugar de window.location.href
+      3. **Estado centralizado**: sidebarOpen manejado en App.tsx
+      4. **Eliminación de InsuranceApp**: Ya no es necesario, App.tsx maneja routing directo
+      5. **Sidebar con logout**: Integrado useLogout() hook con estados de loading
+    - **Beneficios obtenidos**:
+      - Componente reutilizable y separado de responsabilidades
+      - Navegación consistente con React Router
+      - InsuranceApp simplificado (luego eliminado)
+      - Logout funcional desde sidebar
+    - **Archivos creados/modificados**:
+      - `src/components/Sidebar.tsx` - Nuevo componente independiente
+      - `src/App.tsx` - Uso de Sidebar como componente separado
+      - `src/hooks/useAuth.ts` - useLogout integrado en Sidebar
+
+42. **Sistema completo de rutas protegidas**
+    - **Objetivo**: Páginas privadas que requieren autenticación excepto login
+    - **Implementación realizada**:
+      1. **ProtectedRoute component** (`src/components/ProtectedRoute.tsx`): Wrapper para rutas privadas
+      2. **AuthContext mejorado**: Estado de loading, verificación reactiva de token, auto-logout
+      3. **Todas las rutas protegidas**: Excepto `/login` que es pública
+      4. **Login con redirección inteligente**: Guarda ruta intentada y redirige después del login
+      5. **Logout desde sidebar**: Con estados de carga y limpieza automática
+    - **Flujo de autenticación**:
+      - Usuario sin login intenta acceder → redirige a `/login`
+      - Login exitoso → redirige a ruta originalmente intentada
+      - Navegación libre en rutas privadas mientras esté autenticado  
+      - Logout → limpia tokens y vuelve a `/login`
+    - **Archivos creados/modificados**:
+      - `src/components/ProtectedRoute.tsx` - Componente de protección de rutas
+      - `src/context/AuthContext.tsx` - Mejorado con loading, verificación reactiva, logout
+      - `src/pages/Login.tsx` - Redirección inteligente con useLocation/useNavigate
+      - `src/hooks/useAuth.ts` - Actualización del contexto tras login exitoso
+      - `src/App.tsx` - Todas las rutas privadas envueltas en ProtectedRoute
+    - **Rutas configuradas**:
+      - **Pública**: `/login`
+      - **Privadas**: `/`, `/home`, `/calendario`, `/mi-cuenta`, `/mis-polizas`, `/preguntas-frecuentes`, `/pagos`, `/asistencia`, `/contacto`, `/denuncias`, `/denunciar`, `/cobertura`, `/poliza`
+
+43. **Separación de Layout para login sin Header/Footer**
+    - **Objetivo**: Login page debe renderizarse sin Layout (sin Header, Footer, Sidebar)
+    - **Implementación realizada**:
+      1. **Componente Layout** (`src/components/Layout.tsx`): Envuelve Header, Footer, Sidebar con children
+      2. **AppRouter separado** (`src/routes/AppRouter.tsx`): Lógica completa de routing independiente
+      3. **Patrón de rutas diferenciadas**: 
+         - Login sin Layout: Ruta directa `/login` → `<Login />`
+         - Rutas protegidas con Layout: Ruta `/*` → `<Layout><ProtectedRoutes/></Layout>`
+      4. **Gestión de títulos dinámicos**: Layout maneja títulos por pathname
+      5. **Estados centralizados**: Sidebar open/close manejado en Layout
+    - **Beneficios obtenidos**:
+      - Login limpio sin elementos de navegación
+      - Header/Footer/Sidebar solo en rutas autenticadas
+      - Arquitectura clara entre rutas públicas y privadas
+      - Reutilización del componente Layout
+    - **Archivos creados/modificados**:
+      - `src/components/Layout.tsx` - Nuevo componente Layout con Header/Footer/Sidebar
+      - `src/routes/AppRouter.tsx` - Routing completo separado de App.tsx
+      - `src/App.tsx` - Simplificado a BrowserRouter + AuthProvider + AppRouter
+      - Eliminados: InsuranceApp.tsx definitivamente (ya no era necesario)
+
+44. **Limpieza final del proyecto y organización**
+    - **Objetivo**: Eliminar archivos redundantes y organizar estructura final
+    - **Implementación realizada**:
+      1. **Limpieza de directorios**: Movidos todos los backups a ~/borrar
+      2. **Eliminación de redundancia**: Removido /router directory (solo queda /routes)  
+      3. **Corrección de warnings TypeScript**: Eliminadas variables no utilizadas
+      4. **Build verificado**: Proyecto compila sin errores ni warnings
+      5. **Estructura final limpia**: Solo archivos necesarios en el proyecto
+    - **Archivos movidos a ~/borrar**:
+      - App.tsx.backup, App.tsx.backup2, App.tsx.backup3
+    - **Archivos eliminados del proyecto**:
+      - /router/routes.ts (redundante con /routes)
+    - **Correcciones TypeScript**:
+      - Footer.tsx: Removido import useLocation no utilizado
+      - AuthContext.tsx: Removido import getAuthToken no utilizado  
+      - Login.tsx: Removida prop onNavigateToHome y interface no utilizada
+      - AppRouter.tsx: Removido import useNavigate no utilizado
+    - **Estado final**: 
+      - Build exitoso sin errores ni warnings
+      - Proyecto organizado y limpio
+      - Todos los features funcionando correctamente
+
+45. **Implementación completa PWA (Progressive Web App)**
+    - **Objetivo**: Convertir la aplicación en PWA instalable y con funcionalidad offline
+    - **Implementación realizada**:
+      1. **Manifest PWA** (`public/manifest.json`): Metadatos completos de la aplicación
+      2. **Vite PWA Plugin**: Instalado vite-plugin-pwa para automatización
+      3. **Service Worker automático**: Workbox integrado con estrategias de cache
+      4. **Iconos PWA**: Generados icon-192.png y icon-512.png (azul con "NS")
+      5. **HTML optimizado**: Meta tags PWA, theme-color, descripción
+      6. **Cache offline**: Páginas estáticas + API cache con NetworkFirst strategy
+      7. **Configuración Vite**: allowedHosts: 'all' para ngrok/tunneling
+    - **Características PWA implementadas**:
+      - ✅ Instalable como app nativa ("Agregar a pantalla de inicio")
+      - ✅ Funciona offline (páginas visitadas cacheadas)
+      - ✅ Service worker con auto-actualización
+      - ✅ Cache inteligente de API (24h expiration, 10 entries max)
+      - ✅ Manifest completo con orientación portrait
+      - ✅ Iconos en múltiples tamaños para diferentes dispositivos
+    - **Archivos creados/modificados**:
+      - `public/manifest.json` - Metadatos PWA completos
+      - `public/icon-192.png`, `public/icon-512.png` - Iconos PWA generados
+      - `vite.config.ts` - Configuración VitePWA + Workbox + allowedHosts
+      - `index.html` - Meta tags PWA, favicon actualizado, theme-color
+      - `package.json` - Dependencia vite-plugin-pwa agregada
+    - **Build PWA exitoso**:
+      - Service worker generado automáticamente (sw.js)
+      - Manifest webmanifest generado
+      - Precache de 427KB de archivos estáticos
+      - API caching configurado para endpoint Nación Seguros
+    - **Testing realizado**:
+      - Build y preview exitosos
+      - Túnel ngrok para testing móvil
+      - Funcionalidad PWA verificada en dispositivo móvil
+      - Instalación como app nativa confirmada
+    - **Distribución preparada**: 
+      - Ready para Android (PWABuilder → APK)
+      - Ready para iOS (Capacitor → Xcode)
+      - Build estático deployable en cualquier hosting
+
+46. **Reorganización de mocking system y testing infrastructure**
+   - **Objetivo**: Implementar sistema organizado de mocks y testing completo para componentes
+   - **Implementación realizada**:
+     1. **Mocking system modular**:
+        - Creada carpeta `/src/mocks/` para organizar mocks
+        - Movido `auth.ts` → `authService.ts` para claridad
+        - Creado `authMock.ts` con responses mockeados
+        - Creado `mockUtils.ts` con utilidades reutilizables (`simulateNetworkDelay`, `withMockDelay`)
+     2. **Variables de entorno para mocks**:
+        - Agregada `VITE_MOCK_DATA=false` para toggle mock/real
+        - Agregada `VITE_MOCK_DELAY=800` para timeout configurable
+        - Timeout parametrizable desde .env en todos los mocks
+     3. **Endpoints organizados**:
+        - Creado objeto `AUTH_ENDPOINTS` en authService para centralizar rutas
+        - Eliminadas rutas hardcodeadas, todo configurable desde objeto
+     4. **Testing infrastructure separada**:
+        - Configuración dual: `vite.config.test.ts` (services/node) y `vite.config.components.ts` (components/jsdom)
+        - Scripts específicos: `test:services`, `test:components`, `test:all`
+        - Instalado `@testing-library/user-event` para interacciones
+        - Configurado `@testing-library/jest-dom` para matchers avanzados
+     5. **Tests de componentes completos**:
+        - **Footer.test.tsx**: Render básico con React Router wrapper
+        - **Header.test.tsx**: Render con props mockeadas (onMenuClick, onBackClick)
+        - **Sidebar.test.tsx**: Test completo con 11 casos:
+          * Render sin errores
+          * Contenido/estructura (todos los items de navegación)
+          * Interacciones (clicks, navegación, logout)
+          * Visibilidad/estado (clases CSS, isOpen)
+          * Estados de loading (logout pending/normal)
+   - **Estructura final de archivos**:
+     - `src/mocks/mockUtils.ts` - Utilidades para delay configurable
+     - `src/mocks/authMock.ts` - Mock responses de autenticación
+     - `src/services/authService.ts` - Servicio con endpoints organizados + toggle mock/real
+     - `tests/components/Footer.test.tsx` - Test básico de render
+     - `tests/components/Header.test.tsx` - Test básico de render con props
+     - `tests/components/Sidebar.test.tsx` - Test completo con 11 casos
+     - `vite.config.test.ts` - Config para services (node env)
+     - `vite.config.components.ts` - Config para components (jsdom env)
+   - **Comandos de testing disponibles**:
+     - `npm run test:services` - Tests de lógica/servicios
+     - `npm run test:components` - Tests de componentes React
+     - `npm run test:components -- --watch` - Modo watch para desarrollo UI
+     - `npm run test:all` - Ejecuta ambos tipos en secuencia
+   - **Credenciales de prueba organizadas**:
+     - Movidas desde `TEST_CREDENTIALS` exportadas a `useState` local en Login page
+     - Mocks no dependen de credenciales específicas, responden siempre igual
+   - **Sistema mock/real funcional**:
+     - `VITE_MOCK_DATA=true` → Usa mocks con delay configurable
+     - `VITE_MOCK_DATA=false` → Usa API real
+     - Delay configurable con `VITE_MOCK_DELAY=800` (ms)
+     - Un mock por función, escalable para nuevos endpoints
+
+47. **Implementación completa del sistema FAQ con acordeón y servicio**
+   - **Objetivo**: Crear página de preguntas frecuentes con acordeón estándar y servicio backend
+   - **Implementación realizada**:
+     1. **Componentes de acordeón**:
+        - `AccordionItem.tsx` - Componente reutilizable para categorías con expand/collapse
+        - `QuestionItem.tsx` - Componente para preguntas individuales con toggle
+        - `QuestionsContext.tsx` - Context para manejar estado de preguntas (una abierta por categoría)
+     2. **Arquitectura de servicio**:
+        - `faqService.ts` - Servicio con método `getAllFAQs()` 
+        - `faqMock.ts` - Mock data con 6 categorías y 15 preguntas detalladas
+        - `faqTypes.ts` - Tipos TypeScript (Question, FAQCategory, FAQResponse)
+     3. **Página FAQ completamente funcional**:
+        - Mock data inline en componente para evitar problemas de importación
+        - Búsqueda en tiempo real con filtrado local
+        - Estados de loading, error y sin resultados
+        - Acordeón de dos niveles: categorías → preguntas → respuestas
+     4. **Comportamiento de acordeón**:
+        - **Categorías**: Múltiples abiertas simultáneamente (independientes)
+        - **Preguntas**: Solo una abierta por categoría (usando QuestionsContext)
+        - **Iconos intuitivos**: ChevronDown/Right para categorías, Plus/Minus para preguntas
+        - **Animaciones**: Transiciones CSS suaves para expand/collapse
+     5. **Testing completo del servicio**:
+        - `faq.test.ts` - 8 tests verificando estructura, datos, consistencia
+        - Validación de categorías esperadas (Siniestros, Contratación, App, etc.)
+        - Verificación de IDs únicos y datos consistentes
+        - Test de mock delay y comportamiento asíncrono
+     6. **Organización de archivos corregida**:
+        - `QuestionsContext.tsx` movido de `/components` a `/context` (ubicación correcta)
+        - Importaciones actualizadas en AccordionItem y QuestionItem
+   - **Problemas resueltos**:
+     - **Error de importación**: Recreados tipos con nombre `faqTypes.ts` para evitar cache
+     - **Exportaciones problemáticas**: Eliminado export default con interfaces
+     - **Versión Node.js**: Actualizada a Node 20.19 con nvm para Vite
+     - **Funcionamiento verificado**: Servidor dev ejecutándose correctamente
+   - **Archivos creados/modificados**:
+     - `src/components/AccordionItem.tsx` - Acordeón de categorías con QuestionsProvider
+     - `src/components/QuestionItem.tsx` - Preguntas con context para cierre automático
+     - `src/context/QuestionsContext.tsx` - Context para estado de preguntas por categoría
+     - `src/services/faqService.ts` - Servicio simplificado solo con getAllFAQs()
+     - `src/mocks/faqMock.ts` - Datos mockeados completos con 6 categorías
+     - `src/types/faqTypes.ts` - Tipos Question, FAQCategory, FAQResponse
+     - `src/pages/PreguntasFrecuentes.tsx` - Página completa con mock data inline
+     - `src/pages/PreguntasFrecuentes.css` - Estilos completos para acordeón y loading states
+     - `tests/services/faq.test.ts` - Suite de tests completa (8 tests pasando)
+     - `.env` - Variables VITE_USE_MOCKS=true y VITE_MOCK_DELAY=800
+   - **Funcionalidades finales**:
+     - ✅ Acordeón funcional con comportamiento estándar
+     - ✅ Búsqueda en tiempo real (filtrado local)
+     - ✅ Estados de UI completos (loading, error, sin resultados)
+     - ✅ Servicio con fallback a mocks
+     - ✅ Testing completo del servicio
+     - ✅ Arquitectura limpia y escalable
+
+48. **Pendiente para próxima modificación**:
+   - **Expandir AuthContext**: Agregar todos los datos del usuario del login response (usuario_oracle, telefono_movil, numero_doc, etc.) al contexto para hacerlos disponibles en todas las pantallas
+
+48. **Implementación de sistema de pólizas con localStorage post-login**
+   - **Objetivo**: Cargar pólizas automáticamente tras login y almacenarlas en localStorage para acceso instantáneo
+   - **Diálogo del usuario**: "necesito que las polizas se carguen leyendo del service luego de que el usuario se loguea. Que se guarden en localstorage. Y que la /page/MisPolizas las cargue desde el localstorage."
+   - **Implementación realizada**:
+     1. **Funciones de localStorage para pólizas** (`src/services/polizasService.ts`):
+        - `getStoredPolizas()` - Lee pólizas del localStorage
+        - `setStoredPolizas()` - Guarda pólizas en localStorage
+        - `removeStoredPolizas()` - Limpia pólizas del localStorage
+        - `hasStoredPolizas()` - Verifica existencia de pólizas
+        - `loadAndCachePolizas()` - Método específico para carga post-login
+     2. **Modificación del servicio getAllPolizas()**:
+        - Ahora guarda automáticamente en localStorage después de obtener del API
+        - Mantiene funcionalidad original para carga directa desde API
+     3. **AuthContext actualizado** (`src/context/AuthContext.tsx`):
+        - Import de polizasService y removeStoredPolizas
+        - Carga automática de pólizas post-login en useEffect línea 52
+        - Limpieza de pólizas en logout() línea 36
+
+#54 - Mensaje condicional "Hola usuario" solo después del login
+   **Fecha**: 2025-09-11
+   **Problema**: El mensaje "¡Hola Juan!" se mostraba hardcodeado en todas las rutas
+   **Solución implementada**:
+     1. **Layout.tsx modificado** (`src/components/Layout.tsx`):
+        - Import del AuthContext para acceder a isAuthenticated y user
+        - Títulos condicionales en rutas "/" y "/home":
+          - Si authenticated AND user?.nombre: `¡Hola ${user.nombre}!`
+          - Si no authenticated O sin nombre: "Bienvenido"
+        - **Corrección**: Cambió `user?.name` por `user?.nombre` (campo correcto del UserData)
+        - **Corrección**: Validación doble `isAuthenticated && user?.nombre` para evitar "undefined"
+        - Mantiene títulos estáticos para otras rutas
+     2. **Home.tsx limpiado** (`src/pages/Home.tsx`):
+        - Eliminado estado local hardcodeado `user` con `name: 'Juan'`
+        - Eliminado import del AuthContext (ya no necesario)
+        - Removido completamente el mensaje de saludo (evita duplicación con header)
+        - Eliminada sección `welcome-section` completa
+     2. **Beneficios**:
+        - Mensaje personalizado solo se muestra después del login exitoso
+        - Usa el nombre real del usuario autenticado
+        - Fallback genérico "Bienvenido" para usuarios no autenticados
+
+#55 - Mensaje de saludo con timer post-login
+   **Fecha**: 2025-09-11
+   **Problema**: El mensaje "¡Hola usuario!" se mostraba permanentemente después del login
+   **Solución implementada**:
+     1. **AuthContextType expandido** (`src/types/auth.ts`):
+        - Agregado `showWelcomeMessage: boolean`
+        - Agregado `triggerWelcomeMessage: () => void`
+     2. **AuthContext modificado** (`src/context/AuthContext.tsx`):
+        - Estado `showWelcomeMessage` inicializado en false
+        - Función `triggerWelcomeMessage()` con timer de 4 segundos
+        - Limpieza del estado en logout()
+     3. **Layout.tsx modificado** (`src/components/Layout.tsx`):
+        - Usa `showWelcomeMessage` en lugar de `isAuthenticated`
+        - Títulos: "¡Hola {nombre}!" solo cuando showWelcomeMessage=true
+        - Fallback a "Inicio" en lugar de "Bienvenido" para rutas principales
+     4. **useAuth hook modificado** (`src/hooks/useAuth.ts`):
+        - Import del AuthContext
+        - Llama `triggerWelcomeMessage()` después del login exitoso
+        - Se ejecuta junto con storage event y query invalidation
+     5. **Comportamiento**:
+        - Mensaje aparece solo inmediatamente después del login exitoso
+        - Se oculta automáticamente después de 4 segundos
+        - No se muestra en sesiones ya establecidas o al refrescar página
+
+#56 - Sistema de selección global de pólizas
+   **Fecha**: 2025-09-11
+   **Necesidad**: Permitir seleccionar una póliza y mantenerla disponible en toda la aplicación
+   **Solución implementada**:
+     1. **PolizaContext creado** (`src/context/PolizaContext.tsx`):
+        - Estado global `selectedPoliza: Poliza | null`
+        - Funciones `selectPoliza()` y `clearSelectedPoliza()`
+        - Persistencia automática en localStorage con clave `selected_poliza`
+        - Hook `useSelectedPoliza()` para acceso fácil desde componentes
+        - Manejo de errores en localStorage con cleanup automático
+     2. **App.tsx modificado**:
+        - Integración del `PolizaProvider` en la jerarquía de providers
+        - Envuelve `AuthProvider > PolizaProvider > PopupProvider`
+     3. **CardPoliza.tsx mejorado**:
+        - Import del hook `useSelectedPoliza`
+        - Botón "Seleccionar" con estado visual (texto/check icon)
+        - Lógica de comparación por `numero_poliza` + `numero_riesgo`
+        - Clase CSS condicional `selected` para la card
+        - Handler `handleSelectPoliza()` para ejecutar selección
+     4. **CardPoliza.css ampliado**:
+        - Estilo `.policy-card-detailed.selected` con borde azul y sombra
+        - Botón `.select-btn` con estados normal/hover/selected
+        - Colores: azul normal, verde para seleccionado
+        - Responsive design mantenido
+     5. **Características**:
+        - Selección persiste entre páginas y sesiones (localStorage)
+        - Una sola póliza seleccionada a la vez
+        - Feedback visual inmediato (borde + botón)
+        - Accesible desde cualquier componente con `useSelectedPoliza()`
+
+#57 - Normalización de keys de localStorage en .env
+   **Fecha**: 2025-09-11
+   **Problema**: Key de localStorage hardcodeado en PolizaContext, inconsistente con patrón del proyecto
+   **Solución implementada**:
+     1. **.env actualizado**:
+        - Agregado `VITE_POLIZAS_STORAGE_KEY=polizas_data` (ya se usaba pero no estaba definido)
+        - Agregado `VITE_SELECTED_POLIZA_STORAGE_KEY=selected_poliza` (nuevo)
+        - Sección "Configuración de localStorage" para organizar keys
+     2. **PolizaContext.tsx corregido**:
+        - Cambió `const SELECTED_POLIZA_KEY = 'selected_poliza'`
+        - Por `const SELECTED_POLIZA_KEY = import.meta.env.VITE_SELECTED_POLIZA_STORAGE_KEY || 'selected_poliza'`
+        - Mantiene fallback por seguridad
+     3. **Consistencia lograda**:
+        - Todos los keys de localStorage ahora están centralizados en .env
+        - Patrón uniforme: `import.meta.env.VITE_*_STORAGE_KEY || 'fallback'`
+        - Configurables por ambiente sin recompilar
+
+#58 - Estandarización completa de keys localStorage con VITE_STORAGE_KEY_*
+   **Fecha**: 2025-09-11
+   **Problema**: Nomenclatura inconsistente de keys de localStorage en el proyecto
+   **Solución implementada**:
+     1. **Nuevos keys en .env**:
+        ```
+        VITE_STORAGE_KEY_AUTH_TOKEN=nacion_auth_token
+        VITE_STORAGE_KEY_REFRESH_TOKEN=refresh_token
+        VITE_STORAGE_KEY_USER_DATA=user_data
+        VITE_STORAGE_KEY_POLIZAS=polizas_data
+        VITE_STORAGE_KEY_SELECTED_POLIZA=selected_poliza
+        ```
+     2. **Archivos actualizados**:
+        - `src/services/authService.ts`: 6 referencias actualizadas
+        - `src/services/polizasService.ts`: 3 referencias actualizadas
+        - `src/context/PolizaContext.tsx`: 1 referencia actualizada
+        - `tests/setup.ts`: Mock environment variables actualizadas
+        - `tests/setup.js`: Mock environment variables actualizadas
+        - `tests/types.d.ts`: Interface ImportMetaEnv actualizada
+        - `src/env.d.ts`: Interface ImportMetaEnv actualizada
+        - `vite.config.components.ts`: Define objects actualizados
+        - `vite.config.test.ts`: Define objects actualizados
+     3. **Patrón unificado**:
+        - Prefijo: `VITE_STORAGE_KEY_*`
+        - Uso: `import.meta.env.VITE_STORAGE_KEY_* || 'fallback'`
+        - Configuración centralizada en .env
+        - TypeScript definitions completamente actualizadas
+
+#59 - Consolidación de carpetas de contextos (contexts → context)
+   **Fecha**: 2025-09-11
+   **Problema**: Inconsistencia en estructura de carpetas - existían tanto `src/context/` como `src/contexts/`
+   **Solución implementada**:
+     1. **Movimiento de archivos**:
+        - `src/contexts/PopupContext.tsx` → `src/context/PopupContext.tsx`
+        - Eliminada carpeta `src/contexts/` vacía
+     2. **Imports actualizados**:
+        - `src/App.tsx`: `"./contexts/PopupContext"` → `"./context/PopupContext"`
+        - `src/hooks/usePopup.ts`: `"../contexts/PopupContext"` → `"../context/PopupContext"`
+     3. **Estructura final unificada**:
+        ```
+        src/context/
+        ├── AuthContext.tsx
+        ├── PolizaContext.tsx
+        └── PopupContext.tsx
+        ```
+     4. **Beneficios**:
+        - Estructura consistente (singular)
+        - Todos los contextos en una ubicación
+        - Eliminada confusión entre carpetas
+
+#60 - Visualización de póliza seleccionada en Home
+   **Fecha**: 2025-09-11
+   **Necesidad**: Mostrar qué póliza está seleccionada arriba de botones de acción en Home
+   **Solución implementada**:
+     1. **Home.tsx modificado** (`src/pages/Home.tsx`):
+        - Import del hook `useSelectedPoliza` del PolizaContext
+        - Sección condicional que solo aparece si hay póliza seleccionada
+        - Ubicación: entre carrusel de pólizas y botones de acción
+        - Contenido: "Póliza seleccionada: **[número_poliza]**"
+     2. **Home.css actualizado** (`src/pages/Home.css`):
+        - Clase `.selected-poliza-info` con estilo azul claro
+        - Fondo `#e3f2fd`, borde `#1976d2`
+        - Texto centrado, padding cómodo, bordes redondeados
+        - Número de póliza en negrita con color más oscuro
+     3. **Características**:
+        - Solo visible cuando hay póliza seleccionada
+        - Se actualiza automáticamente al cambiar selección
+        - Estilo consistente con tema azul del proyecto
+        - Ubicación estratégica para contextualizar acciones
+
+#61 - Unificación de URLs base del API (VITE_BASE_URL_API)
+   **Fecha**: 2025-09-11
+   **Problema**: Duplicación confusa de variables para la misma URL del API
+   **Variables duplicadas eliminadas**:
+     - `VITE_AUTH_BASE_URL=https://capacitacion.nacion-seguros.com.ar:4445`
+     - `VITE_API_BASE_URL=https://capacitacion.nacion-seguros.com.ar:4445`
+   **Solución implementada**:
+     1. **.env simplificado**:
+        - Unificado en `VITE_BASE_URL_API=https://capacitacion.nacion-seguros.com.ar:4445`
+        - Eliminadas variables duplicadas
+     2. **Servicios actualizados**:
+        - `src/services/authService.ts`: `VITE_AUTH_BASE_URL` → `VITE_BASE_URL_API`
+        - `src/services/polizasService.ts`: `VITE_API_BASE_URL` → `VITE_BASE_URL_API`
+        - `src/services/hipService1.ts`: [ELIMINADO]
+        - `src/services/hipService2.ts`: [ELIMINADO]
+     3. **Configuraciones actualizadas**:
+        - `tests/setup.ts`: Mock environment variable actualizada
+        - `tests/setup.js`: Mock environment variable actualizada
+        - `tests/types.d.ts`: Interface ImportMetaEnv actualizada
+        - `src/env.d.ts`: Interface ImportMetaEnv actualizada
+        - `vite.config.components.ts`: Define object actualizado
+        - `vite.config.test.ts`: Define object actualizado
+     4. **Beneficios**:
+        - Una sola variable para URL del API
+        - Configuración más clara y mantenible
+        - Eliminada confusión entre AUTH vs API
+        - Consistencia en todos los servicios
+
+#62 - Fix de pérdida de foco en TextCustom (buscador MisPolizas)
+   **Fecha**: 2025-09-11
+   **Problema**: Input perdía foco después de la primera letra, teclado desaparecía en móvil
+   **Causa raíz**: Cambio condicional de estructura DOM entre `<input>` directo y `<div><input></div>`
+   **Solución implementada** (`src/components/TextCustom.tsx`):
+     1. **Estructura DOM consistente**:
+        - Eliminada lógica condicional `if (needsContainer)`
+        - Siempre usa `<div className="text-custom-container">` wrapper
+        - Input siempre dentro del container, nunca directo
+     2. **Manejo de foco mejorado**:
+        - `useRef<HTMLInputElement>` para referencia directa al input
+        - Estados `wasFocused` para trackear cuando el input tenía foco
+        - `useEffect` que restaura foco si se perdió por re-render
+        - Handlers `onFocus` y `onBlur` para control de estado
+     3. **Beneficios**:
+        - Foco mantenido durante escritura continua
+        - Teclado móvil no desaparece
+        - Experiencia de usuario fluida en filtros de búsqueda
+        - Estructura DOM estable = mejor performance
+     4. **Compatibilidad**:
+        - No rompe funcionalidad existente (passwords, clear button)
+        - Cambio transparente para componentes que usan TextCustom
+
+#63 - Eliminación de servicios hipService1 y hipService2
+   **Fecha**: 2025-09-11
+   **Motivo**: Servicios no utilizados y código innecesario
+   **Archivos eliminados**:
+     1. **Servicios eliminados**:
+        - `src/services/hipService1.ts` 
+        - `src/services/hipService2.ts`
+     2. **Types limpiados** (`src/types/services.ts`):
+        - Eliminadas interfaces `HipService1Response`, `HipService1Data`
+        - Eliminadas interfaces `HipService2Response`, `HipService2Data`
+        - Mantenida `ServiceResponse<T>` genérica para futuros servicios
+     3. **Index types actualizado** (`src/types/index.ts`):
+        - Eliminados exports de HipService1/2 types
+        - Solo exporta `ServiceResponse` genérico
+     4. **User types simplificado** (`src/types/user.ts`):
+        - `EnrichedUserData` sin campos hipService1/2Data
+        - Comentario para futuras extensiones
+        - Eliminados imports de tipos de servicios
+     5. **Hook simplificado** (`src/hooks/useCompleteUserProfile.ts`):
+        - Eliminadas llamadas a getHipService1Data/2Data
+        - Eliminados imports de servicios
+        - Lógica simplificada para solo copiar usuario actual
+        - TODO agregado para futuros servicios
+     6. **Componente actualizado** (`src/components/EnrichedUserProfile.tsx`):
+        - Eliminada UI de HipService1/2 data
+        - Placeholder genérico para futuros servicios externos
+        - Funcionalidad de refresh mantenida
+     7. **Beneficios**:
+        - Código más limpio sin servicios no utilizados
+        - Menos complejidad en user profile hydration
+        - Arquitectura preparada para futuros servicios reales
+        - Eliminadas dependencias innecesarias
+        - Manejo de errores en carga de pólizas con console logging
+     4. **MisPolizas.tsx modificado** para lectura exclusiva de localStorage:
+        - Reemplazado import polizasService por getStoredPolizas
+        - Cambio de función asíncrona a síncrona (loadPolizas)
+        - Lectura directa desde localStorage sin llamadas API
+        - Manejo de caso cuando no hay pólizas almacenadas
+     5. **Variable de entorno** agregada:
+        - `VITE_POLIZAS_STORAGE_KEY` para clave de localStorage (default: "polizas_data")
+   - **Flujo implementado**:
+     1. Usuario se loguea → AuthContext detecta login exitoso
+     2. Automáticamente llama `polizasService.loadAndCachePolizas()`
+     3. El servicio obtiene pólizas del API y las guarda en localStorage
+     4. MisPolizas siempre lee del localStorage (carga instantánea)
+     5. Al hacer logout, se limpian todas las pólizas almacenadas
+   - **Archivos modificados**:
+     - `src/services/polizasService.ts` - Agregadas funciones localStorage y loadAndCachePolizas()
+     - `src/context/AuthContext.tsx` - Carga post-login y limpieza en logout
+     - `src/pages/MisPolizas.tsx` - Lectura exclusiva de localStorage
+   - **Beneficios obtenidos**:
+     - ✅ Datos siempre disponibles offline
+     - ✅ Carga instantánea de MisPolizas (sin loading de API)
+     - ✅ Actualización automática en cada login
+     - ✅ Limpieza automática en logout
+     - ✅ Manejo de errores en carga de pólizas
+     - ✅ Sistema escalable para otros tipos de datos
+
+49. **Implementación de carrusel de pólizas con CSS puro en Home**
+   - **Objetivo**: Mostrar todas las pólizas en un carrusel horizontal con scroll nativo en lugar de una sola póliza estática
+   - **Diálogo del usuario**: "en la pagina /page/Home se muestra una poliza en policy-card ,es necesario mostrar las polizas en un carrusel con desplazamiento lateral, que me recomendas? tiene que ser liviano."
+   - **Opción elegida**: CSS puro con scroll horizontal (opción más liviana)
+   - **Implementación realizada**:
+     1. **Home.tsx actualizado**:
+        - Agregados imports: `useEffect`, `getStoredPolizas`, tipo `Poliza`
+        - Estado local `polizas` para almacenar array de pólizas
+        - `useEffect` para cargar pólizas desde localStorage al montar componente
+        - Mapeo dinámico de todas las pólizas con datos reales
+        - Renderizado condicional: carrusel para múltiples pólizas, card simple para una sola
+        - Fallback cuando no hay pólizas disponibles
+     2. **CSS carrusel implementado** (`Home.css`):
+        - `.policies-carousel` - Contenedor principal con título "Mis Pólizas"
+        - `.carousel-container` - Flex horizontal con `overflow-x: auto`
+        - `scroll-behavior: smooth` para desplazamiento suave
+        - `scroll-snap-type: x mandatory` para paradas precisas en cada card
+        - `scroll-snap-align: start` en cada `.policy-card`
+        - `-webkit-overflow-scrolling: touch` para mejor experiencia en móviles
+        - Scrollbar oculta con `::-webkit-scrollbar { display: none }`
+        - Cards con `min-width: 280px` y `flex-shrink: 0`
+        - Clase `.policy-card.single` para una sola póliza (ancho 100%)
+     3. **Datos reales de pólizas**:
+        - Número de póliza real desde `poliza.numero_poliza`
+        - Vigencia real desde `inicio_vigencia` y `fin_vigencia`
+        - Vehículo desde `poliza.vehiculo`
+        - Patente desde `poliza.patente`
+        - Cobertura desde `poliza.descripcion_cobertura`
+        - Estado dinámico: vigente (✅) o inactivo (⚠️) según `poliza.estado`
+     4. **Estados de UI**:
+        - Estado de carga automática desde localStorage
+        - Manejo de errores en consola
+        - Fallback para sin pólizas: "No hay pólizas disponibles"
+        - Estilo diferenciado para pólizas inactivas (color rojo)
+   - **Características del carrusel**:
+     - ✅ **Zero JavaScript** - Solo CSS puro
+     - ✅ **Scroll nativo** del browser (muy performante)
+     - ✅ **Touch-friendly** - Scroll táctil perfecto en móviles
+     - ✅ **Snap suave** - Para en cada póliza automáticamente
+     - ✅ **Scrollbar oculta** - UI limpia sin barras de scroll visibles
+     - ✅ **Responsive** - Cards de 280px mínimo con gap de 16px
+     - ✅ **Adaptativo** - Una póliza = card normal, múltiples = carrusel
+   - **Archivos modificados**:
+     - `src/pages/Home.tsx` - Carga de pólizas, mapeo dinámico, renderizado condicional
+     - `src/pages/Home.css` - CSS completo del carrusel con scroll nativo y snap
+   - **Beneficios obtenidos**:
+     - ✅ Carrusel ultra-liviano (0KB JavaScript adicional)
+     - ✅ Experiencia táctil nativa en dispositivos móviles
+     - ✅ Datos reales de pólizas cargados desde localStorage
+     - ✅ Performance óptima con scroll nativo del navegador
+     - ✅ UI adaptativa según cantidad de pólizas
+     - ✅ Diseño limpio sin elementos de UI innecesarios
+
+50. **Agregado de botones de navegación e indicadores al carrusel de pólizas**
+   - **Objetivo**: Agregar botones laterales para navegación manual e indicadores visuales (dots) al carrusel
+   - **Diálogo del usuario**: "se pueden agregar botoncitos laterales para usar tambien para deslizar y como indicador visual?"
+   - **Implementación realizada**:
+     1. **Funcionalidad JavaScript agregada** (`Home.tsx`):
+        - Import de `useRef`, `ChevronLeft`, `ChevronRight` de lucide-react
+        - Estado `currentIndex` para tracking de póliza actual
+        - Ref `carouselRef` para control directo del contenedor
+        - Función `scrollToIndex()` - Scroll programático a póliza específica
+        - Función `handlePrevious()` - Navegar a póliza anterior (circular)
+        - Función `handleNext()` - Navegar a póliza siguiente (circular) 
+        - Función `handleScroll()` - Actualizar currentIndex al hacer scroll manual
+        - Cálculo dinámico de cardWidth (280px + 16px gap = 296px)
+     2. **Botones de navegación lateral**:
+        - Solo se muestran cuando `polizas.length > 1`
+        - Botón anterior: ChevronLeft con `handlePrevious()`
+        - Botón siguiente: ChevronRight con `handleNext()`
+        - Navegación circular: última → primera, primera → última
+        - Posicionados a los lados del carrusel en `.carousel-wrapper`
+     3. **Indicadores visuales (dots)**:
+        - Solo se muestran cuando `polizas.length > 1`  
+        - Un dot por cada póliza con `polizas.map()`
+        - Clase `active` para el dot de la póliza actual
+        - Click en dot navega directamente a esa póliza
+        - Centrados debajo del carrusel
+     4. **CSS para botones e indicadores** (`Home.css`):
+        - **`.carousel-wrapper`** - Contenedor flex con gap para botones
+        - **`.carousel-nav-btn`** - Botones circulares blancos con borde, sombra y hover effects
+        - **`.carousel-indicators`** - Contenedor centrado para dots
+        - **`.carousel-dot`** - Círculos pequeños grises, escala al activarse
+        - **`.carousel-dot.active`** - Dot activo más grande y oscuro
+        - Transiciones suaves (0.2s ease) en todos los elementos
+     5. **Sincronización scroll manual/programático**:
+        - `onScroll={handleScroll}` sincroniza currentIndex con scroll manual
+        - Botones y dots siempre reflejan la posición real
+        - Compatible con scroll táctil y programático
+   - **Comportamiento implementado**:
+     - ✅ **Navegación dual**: Botones + scroll táctil + dots clicables
+     - ✅ **Estado sincronizado**: currentIndex actualizado en tiempo real
+     - ✅ **Circular navigation**: Primera/última conectadas
+     - ✅ **UI condicional**: Botones/dots solo con múltiples pólizas
+     - ✅ **Visual feedback**: Hover effects y transiciones suaves
+     - ✅ **Responsive**: Se adapta a cualquier cantidad de pólizas
+   - **Archivos modificados**:
+     - `src/pages/Home.tsx` - Lógica de navegación, botones, indicadores, refs
+     - `src/pages/Home.css` - Estilos completos para botones laterales e indicadores
+   - **Beneficios obtenidos**:
+     - ✅ Triple método de navegación (botones, scroll, dots)
+     - ✅ Feedback visual claro de posición actual
+     - ✅ Experiencia UX mejorada con navegación intuitiva
+     - ✅ Diseño limpio que no interfiere con scroll nativo
+     - ✅ Código escalable para cualquier número de pólizas
+
+51. **Ajustes de diseño del carrusel: mayor ancho y botones overlay**
+   - **Objetivo**: Hacer el carrusel más ancho y posicionar los botones sobre el carrusel como overlay
+   - **Diálogo del usuario**: "ok, es necesario que sea un poco mas ancho y que los botones esten sobre el carrusel"
+   - **Implementación realizada**:
+     1. **Carrusel más ancho**:
+        - Cards aumentadas de `min-width: 280px` a `min-width: 320px` (+40px)
+        - Ajustado cálculo de `cardWidth` en JavaScript de 296px a 336px
+        - Actualizado en funciones `scrollToIndex()` y `handleScroll()`
+        - Mejor aprovechamiento del espacio horizontal
+     2. **Botones como overlay**:
+        - Removida estructura flex lateral de `.carousel-wrapper`
+        - Botones posicionados con `position: absolute`
+        - Botón anterior: `left: 8px` (.carousel-nav-prev)
+        - Botón siguiente: `right: 8px` (.carousel-nav-next)
+        - Centrados verticalmente: `top: 50%, transform: translateY(-50%)`
+        - `z-index: 10` para posicionarse sobre el contenido
+     3. **CSS ajustado para nueva disposición**:
+        - **`.carousel-wrapper`** - Cambiado de flex a `display: block, position: relative`
+        - **`.carousel-container`** - Removido `flex: 1` para ocupar todo el ancho
+        - **`.carousel-nav-btn`** - Agregado `position: absolute` y posicionamiento
+        - **Sombra mejorada** - `box-shadow` más pronunciada (0.2 opacity) para overlay
+     4. **Reorganización del HTML**:
+        - Botones movidos fuera del flujo lateral
+        - Renderizados después del contenedor del carrusel
+        - Agrupados con fragment `<>` para mantener condicional único
+   - **Beneficios obtenidos**:
+     - ✅ **Más espacio para contenido** - Cards 40px más anchas
+     - ✅ **Botones no invasivos** - Overlay sobre el carrusel sin ocupar espacio extra
+     - ✅ **Mejor UX visual** - Botones flotan elegantemente sobre el contenido
+     - ✅ **Mayor área clickeable** - Carrusel ocupa todo el ancho disponible
+     - ✅ **Diseño más limpio** - Sin interrupciones en el flujo del carrusel
+   - **Archivos modificados**:
+     - `src/pages/Home.tsx` - Actualizado cardWidth (336px) en funciones de scroll
+     - `src/pages/Home.css` - Cards más anchas (320px), botones absolute positioning
+   - **Medidas actualizadas**:
+     - Card width: 280px → 320px
+     - Total cardWidth (con gap): 296px → 336px
+     - Botones: 8px desde bordes izquierdo/derecho
+     - Z-index botones: 10 (sobre contenido)
+
+52. **Migración del carrusel a componente CardPoliza**
+   - **Objetivo**: Reemplazar el JSX manual de pólizas por el componente CardPoliza existente sin romper funcionalidad
+   - **Diálogo del usuario**: "se puede usar el componente CardPoliza para el carrusel? explicame sin modificar nada todavia" → "si, pero no rompas nada"
+   - **Implementación realizada**:
+     1. **Verificación previa**:
+        - Confirmado estado actual del carrusel funcionando correctamente
+        - Analizadas las ventajas del componente CardPoliza:
+          * Componente especializado con más información
+          * Mejor diseño visual con sombras y hover effects
+          * Responsive con media queries
+          * Validaciones para casos especiales (patente "A/D")
+          * Labels estructuradas con formato profesional
+     2. **Import seguro**:
+        - Agregado `import CardPoliza from '../components/CardPoliza'` en Home.tsx
+        - Sin modificar imports existentes
+     3. **Reemplazo conservativo**:
+        - Mantenido mismo key: `${poliza.numero_poliza}-${poliza.numero_riesgo}`
+        - Creado wrapper `.carousel-card-wrapper` para mantener estructura
+        - Reemplazado JSX manual completo por `<CardPoliza poliza={poliza} />`
+        - Conservada toda la funcionalidad de navegación
+     4. **CSS adaptativo**:
+        - **`.carousel-card-wrapper`** - min-width: 320px, flex-shrink: 0, scroll-snap-align: start
+        - **`.carousel-container .policy-card-detailed`** - margin-bottom: 0, width: 100%
+        - Mantiene compatibilidad con carrusel existente
+        - No interfiere con CSS del componente CardPoliza
+     5. **Funcionalidad preservada**:
+        - Botones de navegación lateral funcionando
+        - Indicadores (dots) funcionando
+        - Scroll programático y manual funcionando
+        - cardWidth (336px) mantiene precisión
+        - Estados de currentIndex correctos
+   - **Ventajas obtenidas**:
+     - ✅ **Información completa** - Muestra asegurado, año, asistencia, etc.
+     - ✅ **Diseño profesional** - Cards con sombra, badges estilizados, hover effects
+     - ✅ **Código reutilizado** - Componente ya existente y testeado
+     - ✅ **Validaciones incluidas** - Manejo de patente "A/D" y campos opcionales
+     - ✅ **Responsive automático** - Media queries ya implementadas
+     - ✅ **Funcionalidad intacta** - Botones, scroll e indicadores funcionando
+   - **Archivos modificados**:
+     - `src/pages/Home.tsx` - Import CardPoliza, reemplazo JSX por componente
+     - `src/pages/Home.css` - CSS wrapper para adaptar CardPoliza al carrusel
+   - **Estructura final**:
+     ```jsx
+     {polizas.map((poliza) => (
+       <div key={...} className="carousel-card-wrapper">
+         <CardPoliza poliza={poliza} />
+       </div>
+     ))}
+     ```
+   - **Beneficios vs riesgos**:
+     - ✅ Mejor UX con información completa y diseño profesional
+     - ✅ Mantenimiento simplificado usando componente existente
+     - ✅ Zero regresiones - toda funcionalidad preservada
+     - ✅ Escalabilidad mejorada reutilizando código probado
+
+53. **Implementación completa de filtrado en MisPolizas con TextCustom extendido**
+   - **Objetivo**: Agregar campo de filtrado funcional en MisPolizas con botón X para limpiar texto
+   - **Diálogo del usuario**: "quiero que en el filtrar de la pag/Polizas se pueda escribir" → "MisPolizas tenes que modificar, restaura Poliza" → mejoras incrementales
+   - **Implementación realizada**:
+     1. **Filtrado básico implementado** (`MisPolizas.tsx`):
+        - Agregado estado `filterText` con useState
+        - Lógica de filtrado por 3 campos principales: numero_poliza, patente, vehiculo
+        - Renderizado de `filteredPolicies` en lugar de `policies`
+        - Búsqueda insensible a mayúsculas con `toLowerCase()`
+     2. **Normalización avanzada de texto**:
+        - Función `normalizeText()` que combina:
+          * `.toLowerCase()` - Convierte a minúsculas
+          * `.normalize('NFD')` - Descompone caracteres acentuados
+          * `.replace(/[\u0300-\u036f]/g, '')` - Elimina acentos
+        - Búsqueda que ignora totalmente mayúsculas, minúsculas y acentos
+     3. **Extensión de TextCustom para botón clear**:
+        - **Props agregadas**: `showClearButton?: boolean`, `onClear?: () => void`
+        - **Lógica condicional**: Botón X solo aparece cuando hay texto
+        - **Compatibilidad**: Funciona junto con botones password existentes
+        - **CSS específico**: `.clear-toggle-btn` con hover effects y posicionamiento absoluto
+        - **Import X**: Agregado `X` de lucide-react
+     4. **UI/UX mejorada**:
+        - Campo de texto con placeholder descriptivo
+        - Botón X posicionado dentro del input (derecha)
+        - Input controlado con `value={filterText}`
+        - Wrapper `.filter-input-wrapper` con input + botón filtrar
+     5. **Poliza.tsx restaurado**:
+        - Devuelto al estado original sin modificaciones
+        - Solo botón "Filtrar" estático sin funcionalidad
+   - **Funcionalidades finales**:
+     - ✅ **Filtrado en tiempo real** - Sin debounce, respuesta instantánea
+     - ✅ **Búsqueda por 3 campos** - numero_poliza, patente, vehiculo
+     - ✅ **Normalización completa** - Ignora mayúsculas/minúsculas y acentos
+     - ✅ **Botón X para limpiar** - Solo visible cuando hay texto
+     - ✅ **TextCustom reutilizable** - Componente extendido para otros usos
+     - ✅ **UI responsive** - Input flex + botón fijo
+   - **Archivos modificados**:
+     - `src/pages/MisPolizas.tsx` - Filtrado completo con TextCustom
+     - `src/pages/MisPolizas.css` - Estilos para filter-input-wrapper
+     - `src/components/TextCustom.tsx` - Props showClearButton y onClear
+     - `src/components/TextCustom.css` - Estilos .clear-toggle-btn
+     - `src/pages/Poliza.tsx` - Restaurado al estado original
+   - **Ejemplos de búsqueda**:
+     - Buscar "juan" encuentra "Juan", "JUAN", "Juán", "JUÁN"
+     - Buscar "cordoba" encuentra "Córdoba", "CORDOBA", "córdoba"
+     - Buscar "123" encuentra cualquier póliza con "123" en número
+     - Buscar "ford" encuentra vehículos "Ford Focus", "FORD", "ford fiesta"
+
+## Próximas instrucciones:
+
+(Este espacio se actualizará con nuevos comandos)
